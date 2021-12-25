@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dev.finance$</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <h1 id="logo"><img src="assets/logo.svg" alt="Logo Dev Finance'" /></h1>
+    </header>
+
+    <main class="container">
+      <section id="balance">
+        <h2 class="sr-only">Balance</h2>
+
+        <div class="card">
+          <h3>
+            <span>Income</span>
+            <img src="./assets/income.svg" alt="Income's image" />
+          </h3>
+          <p>R$ 5.000,00</p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span>Expenses</span>
+            <img src="assets/expense.svg" alt="Expenses's image" />
+          </h3>
+          <p>R$ 2.000,00</p>
+        </div>
+
+        <div class="card total">
+          <h3>
+            <span>Total</span>
+            <img src="assets/total.svg" alt="" />
+          </h3>
+          <p>R$ 3.000,00</p>
+        </div>
+      </section>
+
+      <section id="transaction">
+        <h2 class="sr-only">Transaction</h2>
+
+        <a href="#" class="button new" data-btn="add">+ Add</a>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Category</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="description">Luz</td>
+              <td class="expense">-£100.00</td>
+              <td class="date">23/01/2021</td>
+              <td>Bill</td>
+              <td><img src="assets/minus.svg" alt="remove transaction" /></td>
+            </tr>
+            <tr>
+              <td class="description">Gasolina</td>
+              <td class="expense">-£10.00</td>
+              <td class="date">30/01/2021</td>
+              <td>Transport</td>
+              <td><img src="assets/minus.svg" alt="remove transaction" /></td>
+            </tr>
+            <tr>
+              <td class="description">Web Sit Developement</td>
+              <td class="income">£500.00</td>
+              <td class="date">01/02/2021</td>
+              <td>Salary</td>
+              <td><img src="assets/minus.svg" alt="remove transaction" /></td>
+            </tr>
+            <tr>
+              <td class="description">Supermarkt</td>
+              <td class="expense">-£50.00</td>
+              <td class="date">02/02/2021</td>
+              <td>Groceries</td>
+              <td><img src="assets/minus.svg" alt="remove transaction" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <!-- <p>dev.finance$</p> -->
+      <p>&copy - Developed by Patricia - Rocketseat - Maratona Discover</p>
+    </footer>
+
+    <div class="modal-overlay" data-modal="add-active">
+      <div class="modal">
+        <div id="form">
+          <h2>New Transaction</h2>
+          <form action="">
+            <div class="input-group">
+              <label class="sr-only" for="description">Description</label>
+              <input type="text" id="description" placeholder="Description" />
+            </div>
+
+            <div class="input-group">
+              <label class="sr-only" for="amount">Amount</label>
+              <input type="number" id="amount" step="0.01" placeholder="0.00" />
+            </div>
+
+            <div class="input-group">
+              <label class="sr-only" for="date">Date</label>
+              <input type="date" id="date" />
+            </div>
+
+            <div class="input-select">
+              <label for="category">Category</label>
+              <select name="category" id="category">
+                <option value="bill">Bill</option>
+                <option value="groceries">Groceries</option>
+                <option value="heath">Heath</option>
+                <option value="beautiful ">Beautiful</option>
+                <option value="transport">Transport</option>
+                <option value="shoping">Shoping</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="input-radio-group">
+              <input type="radio" name="type-transaction" id="income" required/>
+              <label for="income">Income</label>
+              <div class="input-radio-group"></div>
+
+              <input type="radio" name="type-transaction" id="expense" />
+              <label for="expense">Expense</label>
+            </div>
+            <div class="input-group actions ">
+              <button class="btn-form add" type="submit">Add</button>
+              <a href="#" class="btn-form btn-cancel" data-btn="close">Cancel</a>
+            </div>
+            <a href="#" class="btn-form cancel btn-exit" data-btn="close">X</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./js/script.js"></script>
+  
+  </body>
+</html>
